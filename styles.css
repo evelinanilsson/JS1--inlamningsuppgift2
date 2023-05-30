@@ -5,5 +5,15 @@
 }
 
 html {
-    font-family: 'poppins' sans-serif;
+    font-family: 'Poppins' sans-serif;
+}
+
+.weather {
+    background-color: aquamarine;
+    width: 200px;
+    margin: auto;
+}
+
+#search-city {
+    background-color: aqua;
 }
