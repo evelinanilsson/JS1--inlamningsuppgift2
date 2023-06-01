@@ -4,22 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Väder</title>
+    <title>Väder-just nu!</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <h1></h1>
 
 <main class="main-content">
-    <div class="choose-weather-address">
-        <input id="search-city" type="text" placeholder="välj stad">
-
-    </div>
-    <article class="weather">
+    <section class="left-side" id="background-img">
+        <article class="weather">
+            <h1 id="temp">16 °C</h1>
+            <div class="stad-tid">
+                <h2 id="city">Lund</h2>
+                <p id="date-time"></p>
+            </div>
+            <div class="bild-beskrivning">
+                <img src="weather-app-img/images/clear.png">
+                <p id="description">soligt</p>
+            </div>
         
-        <p id="date-time"></p>
-    </article>
+            
+        </article>
+        
+    </section>
+    <section class="right-side">
+        <div class="choose-weather-address">
+            <input id="search-city" type="text" placeholder="välj stad">
+            <button><img src="weather-app-img/images/search.png"></button>
+            <button id="lund">Lund</button>
+            <button id="stockholm">Stockholm</button>
+            <button id="västervik">Västervik</button>
+        </div>
+        <div class="weather-details">
+            <h5>Weather Details</h5>
+            <span>
+                <p>Lufttryck</p>
+                <p id="lufttryck"></p>
+            </span>
+            <span>
+                <p>Fuktighet</p>
+                <p id="fuktighet"></p>
+            </span>
+            <span>
+                <p>Vind</p>
+                <p id="vind"></p>
+            </span>
+            
+        </div>
+    </section>
+    
+    
 </main>
 
 <script src="script.js"></script>

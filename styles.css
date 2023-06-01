@@ -5,15 +5,54 @@
 }
 
 html {
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
 }
 
-.weather {
-    background-color: aquamarine;
-    width: 200px;
+#temp {
+    font-size: 65px;
+}
+
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    height: 100%;
+    /* background-image: url("weather-app-img/images/umbrella\ background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.main-content {
+    width: 80%;
+    min-height: 80vh;
+    /* background-color: white; */
     margin: auto;
+    margin-top: 5%;
+
+    display: flex;
+    
+}
+
+.left-side {
+    background-image: url(weather-app-img/images/clear.jpg);
+    width: 60%;
+}
+
+.right-side {
+    background: rgba(255,255,255,0.5);
+  
+    width: 40%;
+
+}
+.weather {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding-bottom: 3em;
 }
 
 #search-city {
-    background-color: aqua;
+
 }
