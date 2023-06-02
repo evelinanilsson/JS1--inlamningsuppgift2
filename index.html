@@ -22,41 +22,45 @@
                 <p id="date-time"></p>
             </div>
             <div class="bild-beskrivning">
-                <img src="weather-app-img/images/clear.png">
-                <p id="description">soligt</p>
+                <img id="weather-icon"src="weather-app-img/images/clear.png">
+                <p id="description"></p>
             </div>
-        
-            
         </article>
         
     </section>
     <section class="right-side">
         <div class="choose-weather-address">
-            <input id="search-city" type="text" placeholder="välj stad">
-            <button><img src="weather-app-img/images/search.png"></button>
-            <button id="lund">Lund</button>
-            <button id="stockholm">Stockholm</button>
-            <button id="västervik">Västervik</button>
+            <span class="flex-row">
+                <input id="search-city" type="text" placeholder="Sök på ny stad">
+                <button id="search-icon"><img src="weather-app-img/images/search.png"></button>
+            </span>
+            <p id="error">Vi hittar inte den stad du söker, försök igen</p>
+            <p>Favoritstäder</p>
+            <span class="flex-row">
+                <button id="lund">Lund</button>
+                <button id="stockholm">Stockholm</button>
+                <button id="västervik">Västervik</button>
+            </span>
         </div>
         <div class="weather-details">
-            <h5>Weather Details</h5>
-            <span>
+            <h5>Väderinformation</h5>
+            <span class="flex-row">
+                <img class="description-icon" src="weather-app-img/images/airpressure (2).png">
                 <p>Lufttryck</p>
                 <p id="lufttryck"></p>
             </span>
-            <span>
+            <span class="flex-row">
+                <img class="description-icon" src="weather-app-img/images/humidity.png">
                 <p>Fuktighet</p>
                 <p id="fuktighet"></p>
             </span>
-            <span>
+            <span class="flex-row">
+                <img class="description-icon" src="weather-app-img/images/wind.png">
                 <p>Vind</p>
                 <p id="vind"></p>
-            </span>
-            
+            </span>   
         </div>
     </section>
-    
-    
 </main>
 
 <script src="script.js"></script>
