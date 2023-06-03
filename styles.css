@@ -39,6 +39,7 @@ body {
 .left-side {
     background-image: url(weather-app-img/images/balloons.webp);
     width: 70%;
+    align-items: flex-end;
 }
 
 .right-side {
@@ -70,15 +71,22 @@ body {
 .weather-details h5 {
     margin-bottom: 2em;
 }
+
+.choose-weather-address p {
+    margin-bottom: 1em;
+}
 .flex-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
+    align-items: center;
 }
 
 .flex-row button {
     font-size: 16px;
     padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
 }
 #weather-icon {
     height: 50px;
@@ -89,10 +97,17 @@ body {
     padding: 2px;
     font-size: 16px;
     text-align: center;
+    height: 40px;
 }
 #search-icon {
-    height: 50px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
+
+
+    
 
 .description-icon {
     height: 40px;

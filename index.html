@@ -15,8 +15,12 @@
 
 <main class="main-content">
     <section class="left-side" id="background-img">
+
         <article class="weather">
-            <h1 id="temp">16 °C</h1>
+            <div>
+                <h1 id="temp">16 °C</h1>
+                <p id="feels-like"></p>
+            </div>
             <div class="stad-tid">
                 <h2 id="city">Lund</h2>
                 <p id="date-time"></p>
@@ -32,7 +36,7 @@
         <div class="choose-weather-address">
             <span class="flex-row">
                 <input id="search-city" type="text" placeholder="Sök på ny stad">
-                <button id="search-icon"><img src="weather-app-img/images/search.png"></button>
+                <img id="search-icon" src="weather-app-img/images/search.png">
             </span>
             <p id="error">Vi hittar inte den stad du söker, försök igen</p>
             <p>Favoritstäder</p>

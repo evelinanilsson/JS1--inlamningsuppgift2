@@ -2,7 +2,7 @@ let apiKey = "4f8ae2347e767f703527c7565ebb4541";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
 
 let searchBox = document.querySelector(".choose-weather-address input");
-let searchBtn = document.querySelector(".choose-weather-address button");
+let searchBtn = document.querySelector("#search-icon");
 
 let weatherIcon = document.getElementById("weather-icon");
 let backgroundImage = document.getElementById("background-img");
@@ -24,6 +24,7 @@ function getWeather () {
         weatherData = value;
         drawWeather(weatherData)
         document.getElementById("error").style.display = "none";
+        console.log(weatherData)
         })
     
         .catch(function(err) {
@@ -36,6 +37,7 @@ function getWeather () {
 function drawWeather(weatherData) {
     document.getElementById("city").innerHTML = weatherData.name;
     document.getElementById("temp").innerHTML = Math.round(weatherData.main.temp) + "°C";
+    document.getElementById("feels-like").innerHTML = "Känns som: " + Math.round(weatherData.main.feels_like) + "°C";
     document.getElementById("fuktighet").innerHTML = weatherData.main.humidity + "%";
     document.getElementById("lufttryck").innerHTML = weatherData.main.pressure;
     document.getElementById("vind").innerHTML = weatherData.wind.speed + "m/s";
@@ -67,7 +69,7 @@ function drawWeather(weatherData) {
         bodyBackground.style.background = "linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)";
     }
     else if (weatherData.weather[0].main === "Snow"){
-        backgroundImage.style.backgroundImage="url(weather-app-img/images/clouds-twilight-times.jpg)";
+        backgroundImage.style.backgroundImage="url(weather-app-img/images/snow.jpg)";
         weatherIcon.src = "weather-app-img/images/snow.png";
         bodyBackground.style.background = "linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)";
     }
@@ -77,6 +79,9 @@ function drawWeather(weatherData) {
 searchBtn.addEventListener("click", () => {
     city = searchBox.value;
     getWeather();
+    västervik.style.backgroundColor = "white";
+    stockholm.style.backgroundColor = "white";
+    lund.style.backgroundColor = "white";
 })
 
 // favoritstäder snabbval
@@ -84,16 +89,25 @@ searchBtn.addEventListener("click", () => {
 lund.addEventListener("click", () => {
     city = "Lund";
     getWeather();
+    västervik.style.backgroundColor = "white";
+    stockholm.style.backgroundColor = "white";
+    lund.style.backgroundColor = "darkgrey";
 })
 
 stockholm.addEventListener("click", () => {
     city = "Stockholm";
     getWeather();
+    västervik.style.backgroundColor = "white";
+    stockholm.style.backgroundColor = "darkgrey";
+    lund.style.backgroundColor = "white";
 })
 
 västervik.addEventListener("click", () => {
     city = "Västervik";
     getWeather();
+    västervik.style.backgroundColor = "darkgrey";
+    lund.style.backgroundColor = "white";
+    stockholm.style.backgroundColor = "white";
 })
 
 // hämta tid och datum
@@ -104,3 +118,5 @@ setInterval(() => {
    let date  = new Date();
     dateAndTime.innerHTML = date.toString().substring(0,24);
 },1000)
+
+setInterval(getWeather, 1800000);
