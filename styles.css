@@ -8,7 +8,6 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-size: x-large;
     color: white;
-    /* line-height: 2em; */
 }
 
 #temp {
@@ -18,28 +17,28 @@ html {
 body {
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     height: 100%;
-    /* background: linear-gradient(0.25turn, #242627, #ebf8e1, #f69d3c); */
-    /* background-image: url("weather-app-img/images/umbrella\ background.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .main-content {
     width: 70%;
     min-height: 80vh;
-    /* background-color: white; */
     margin: auto;
     margin-top: 5%;
 
     display: flex;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .5);
-    
 }
 
 .left-side {
     background-image: url(weather-app-img/images/balloons.webp);
     width: 70%;
+    min-height: 80vh;
     align-items: flex-end;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding-bottom: 3em;
 }
 
 .right-side {
@@ -52,15 +51,6 @@ body {
     color: gray;
     text-align: center;
 
-}
-.weather {
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    padding-bottom: 3em;
 }
 
 .weather-details {
@@ -106,9 +96,6 @@ body {
     cursor: pointer;
 }
 
-
-    
-
 .description-icon {
     height: 40px;
     width: 40px;
@@ -119,4 +106,29 @@ body {
 #error {
     display: none;
     font-size: 12px;
+}
+
+@media screen and (max-width: 1350px){
+    .main-content {
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .flex-row {
+        justify-content: center;
+        gap: 1em;
+    }
 }

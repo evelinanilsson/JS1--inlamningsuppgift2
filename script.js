@@ -7,7 +7,6 @@ let searchBtn = document.querySelector("#search-icon");
 let weatherIcon = document.getElementById("weather-icon");
 let backgroundImage = document.getElementById("background-img");
 let bodyBackground = document.body;
-let weatherArticle = document.querySelector(".weather");
 let city = "Lund";
 let weatherData = [];
 let lund = document.getElementById("lund");
@@ -30,8 +29,7 @@ function getWeather () {
         .catch(function(err) {
             console.log("error");
             document.getElementById("error").style.display = "block";
-        })
-        
+        })  
 }
 
 function drawWeather(weatherData) {
@@ -42,6 +40,8 @@ function drawWeather(weatherData) {
     document.getElementById("lufttryck").innerHTML = weatherData.main.pressure;
     document.getElementById("vind").innerHTML = weatherData.wind.speed + "m/s";
     document.getElementById("description").innerHTML = weatherData.weather[0].main;
+
+    //byta bakgrund på body, bild i main-content samt väder-ikon beroende på vädret
 
     if (weatherData.weather[0].main === "Clouds"){
         backgroundImage.style.backgroundImage="url(weather-app-img/images/clouds.webp)";
@@ -79,6 +79,7 @@ function drawWeather(weatherData) {
 searchBtn.addEventListener("click", () => {
     city = searchBox.value;
     getWeather();
+    //ta bort grå bakgrund på favoritstad knapp om de har tryckts på innan
     västervik.style.backgroundColor = "white";
     stockholm.style.backgroundColor = "white";
     lund.style.backgroundColor = "white";
@@ -119,4 +120,5 @@ setInterval(() => {
     dateAndTime.innerHTML = date.toString().substring(0,24);
 },1000)
 
+//uppdatera vädret
 setInterval(getWeather, 1800000);
