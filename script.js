@@ -22,8 +22,8 @@ function getWeather () {
         .then ((value) => {
         weatherData = value;
         drawWeather(weatherData)
+        //ta bort "error-text" om den är framme
         document.getElementById("error").style.display = "none";
-        console.log(weatherData)
         })
     
         .catch(function(err) {
@@ -92,21 +92,21 @@ lund.addEventListener("click", () => {
     getWeather();
     västervik.style.backgroundColor = "white";
     stockholm.style.backgroundColor = "white";
-    lund.style.backgroundColor = "darkgrey";
+    lund.style.backgroundColor = "lightgrey";
 })
 
 stockholm.addEventListener("click", () => {
     city = "Stockholm";
     getWeather();
     västervik.style.backgroundColor = "white";
-    stockholm.style.backgroundColor = "darkgrey";
+    stockholm.style.backgroundColor = "lightgrey";
     lund.style.backgroundColor = "white";
 })
 
 västervik.addEventListener("click", () => {
     city = "Västervik";
     getWeather();
-    västervik.style.backgroundColor = "darkgrey";
+    västervik.style.backgroundColor = "lightgrey";
     lund.style.backgroundColor = "white";
     stockholm.style.backgroundColor = "white";
 })
@@ -120,5 +120,5 @@ setInterval(() => {
     dateAndTime.innerHTML = date.toString().substring(0,24);
 },1000)
 
-//uppdatera vädret
+//uppdatera vädret var 30e minut
 setInterval(getWeather, 1800000);
