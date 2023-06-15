@@ -11,58 +11,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<main class="main-content">
-    <section class="left-side" id="background-img">
-        <div>
-            <h1 id="temp">16 °C</h1>
-            <p id="feels-like"></p>
-        </div>
-        <div class="stad-tid">
-            <h2 id="city">Lund</h2>
-            <p id="date-time"></p>
-        </div>
-        <div class="bild-beskrivning">
-            <img id="weather-icon"src="weather-app-img/images/clear.png">
-            <p id="description"></p>
-        </div>
-        
-    </section>
-    <section class="right-side">
-        <div class="choose-weather-address">
-            <span class="flex-row">
-                <input id="search-city" type="text" placeholder="Sök på ny stad">
-                <img id="search-icon" src="weather-app-img/images/search.png">
-            </span>
-            <p id="error">Vi hittar inte den stad du söker, försök igen</p>
-            <p>Favoritstäder</p>
-            <span class="flex-row">
-                <button id="lund">Lund</button>
-                <button id="stockholm">Stockholm</button>
-                <button id="västervik">Västervik</button>
-            </span>
-        </div>
-        <div class="weather-details">
-            <h5>Väderinformation</h5>
-            <span class="flex-row">
-                <img class="description-icon" src="weather-app-img/images/airpressure (2).png">
-                <p>Lufttryck</p>
-                <p id="lufttryck"></p>
-            </span>
-            <span class="flex-row">
-                <img class="description-icon" src="weather-app-img/images/humidity.png">
-                <p>Fuktighet</p>
-                <p id="fuktighet"></p>
-            </span>
-            <span class="flex-row">
-                <img class="description-icon" src="weather-app-img/images/wind.png">
-                <p>Vind</p>
-                <p id="vind"></p>
-            </span>   
-        </div>
-    </section>
-</main>
-
-<script src="script.js"></script>
+    <main class="main-content">
+        <section class="left-side" id="background-img">
+            <div>
+                <h1 id="temp">16 °C</h1>
+                <p id="feels-like"></p>
+            </div>
+            <div class="stad-tid">
+                <h2 id="city">Lund</h2>
+                <p id="date-time"></p>
+            </div>
+            <div class="bild-beskrivning">
+                <img id="weather-icon"src="weather-app-img/images/clear.png">
+                <p id="description"></p>
+            </div>
+            
+        </section>
+        <section class="right-side">
+            <div class="choose-weather-address">
+                <span class="flex-row">
+                    <input id="search-city" type="text" placeholder="Sök på ny stad">
+                    <img id="search-icon" src="weather-app-img/images/search.png">
+                </span>
+                <p id="error">Vi hittar inte den stad du söker, försök igen</p>
+                <p>Favoritstäder</p>
+                <span class="flex-row">
+                    <button id="lund">Lund</button>
+                    <button id="stockholm">Stockholm</button>
+                    <button id="västervik">Västervik</button>
+                </span>
+            </div>
+            <div class="weather-details">
+                <h5>Väderinformation</h5>
+                <span class="flex-row">
+                    <img class="description-icon" src="weather-app-img/images/airpressure (2).png">
+                    <p>Lufttryck</p>
+                    <p id="lufttryck"></p>
+                </span>
+                <span class="flex-row">
+                    <img class="description-icon" src="weather-app-img/images/humidity.png">
+                    <p>Fuktighet</p>
+                    <p id="fuktighet"></p>
+                </span>
+                <span class="flex-row">
+                    <img class="description-icon" src="weather-app-img/images/wind.png">
+                    <p>Vind</p>
+                    <p id="vind"></p>
+                </span>   
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

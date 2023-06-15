@@ -86,10 +86,10 @@ searchBtn.addEventListener("click", () => {
 })
 
 // favoritstäder snabbval
-
 lund.addEventListener("click", () => {
     city = "Lund";
     getWeather();
+    //ändra färg på button om staden är vald
     västervik.style.backgroundColor = "white";
     stockholm.style.backgroundColor = "white";
     lund.style.backgroundColor = "lightgrey";
